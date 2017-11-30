@@ -57,3 +57,4 @@ C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsForGigsAndGenres.resources
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.PopulateGenresTable.resources
+C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
