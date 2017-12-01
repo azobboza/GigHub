@@ -180,6 +180,18 @@
     <Compile Include="Migrations\201711301522406_PopulateGenresTable.Designer.cs">
       <DependentUpon>201711301522406_PopulateGenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201712010949032_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.cs" />
+    <Compile Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.Designer.cs">
+      <DependentUpon>201712010951035_ChangeVemueToVenueIntoGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.cs" />
+    <Compile Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.Designer.cs">
+      <DependentUpon>201712010958584_ChangeTypeOfArtistIdToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -260,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711301522406_PopulateGenresTable.resx">
       <DependentUpon>201711301522406_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.resx">
+      <DependentUpon>201712010949032_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.resx">
+      <DependentUpon>201712010951035_ChangeVemueToVenueIntoGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.resx">
+      <DependentUpon>201712010958584_ChangeTypeOfArtistIdToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
