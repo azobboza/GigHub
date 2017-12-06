@@ -83,8 +83,8 @@ h6,
 
 .form-control {
     font-size:17px;
-    padding: 20px 15px;
     border-radius: 9px;
+    height:42px;
 }
 
 .form-control:focus {
@@ -96,7 +96,6 @@ h6,
     font-size: 17px;
     padding: 7px 20px;
     border-radius: 9px;
-
 }
 
 .dropdown-menu {
