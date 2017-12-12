@@ -55,5 +55,23 @@ namespace GigHub.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public ActionResult Attending()
+        {
+            string userId = User.Identity.GetUserId();
+
+            var gigs = _context.Attendances
+                .Where(g => g.AttendeeId == userId)
+                .Select(a => a.Gigs)
+                .ToList();
+
+            var viewModel = new GigViewModel
+            {
+                UpcomingGigs = gigs,
+                ShowActions = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
 	}
 }

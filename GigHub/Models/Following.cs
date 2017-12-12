@@ -7,17 +7,18 @@ using System.Web;
 
 namespace GigHub.Models
 {
-    public class Attendance
+    public class Following
     {
-        public Gig Gigs { get; set; }
-        public ApplicationUser Attende { get; set; }
         public ApplicationUser User { get; set; }
+        public ApplicationUser Artist { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        public int GigId { get; set; }
+        public string UserId { get; set; }
+
         [Key]
         [Column(Order = 2)]
-        public string AttendeeId { get; set; } 
+        public int ArtistId { get; set; }
+
     }
 }

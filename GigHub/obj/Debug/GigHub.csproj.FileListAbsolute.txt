@@ -138,7 +138,9 @@ C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migr
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNameToApplicationUser.resources
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.RemoveRequiredForGenres.resources
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addAttendance.resources
+C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowingClass.resources
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
+C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.changeToApplicationuserClass.resources
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache

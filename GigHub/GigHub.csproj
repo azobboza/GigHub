@@ -173,9 +173,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,10 +221,19 @@
     <Compile Include="Migrations\201712061744130_addAttendance.Designer.cs">
       <DependentUpon>201712061744130_addAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712121005453_AddFollowingClass.cs" />
+    <Compile Include="Migrations\201712121005453_AddFollowingClass.Designer.cs">
+      <DependentUpon>201712121005453_AddFollowingClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121112412_changeToApplicationuserClass.cs" />
+    <Compile Include="Migrations\201712121112412_changeToApplicationuserClass.Designer.cs">
+      <DependentUpon>201712121112412_changeToApplicationuserClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -230,6 +241,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\GigViewModel.cs" />
     <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +291,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
+    <Content Include="Views\Gigs\Attending.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712061744130_addAttendance.resx">
       <DependentUpon>201712061744130_addAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121005453_AddFollowingClass.resx">
+      <DependentUpon>201712121005453_AddFollowingClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121112412_changeToApplicationuserClass.resx">
+      <DependentUpon>201712121112412_changeToApplicationuserClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
