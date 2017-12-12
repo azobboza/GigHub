@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using System.Data.Entity;
 
 namespace GigHub.Controllers
 {
@@ -63,15 +64,18 @@ namespace GigHub.Controllers
             var gigs = _context.Attendances
                 .Where(g => g.AttendeeId == userId)
                 .Select(a => a.Gigs)
+                .Include(g => g.Artist)
+                .Include(g => g.Genre)
                 .ToList();
 
             var viewModel = new GigViewModel
             {
                 UpcomingGigs = gigs,
-                ShowActions = User.Identity.IsAuthenticated
+                ShowActions = User.Identity.IsAuthenticated,
+                Heading = "Gigs I'm attending"
             };
 
-            return View(viewModel);
+            return View("Gigs", viewModel);
         }
 	}
 }
