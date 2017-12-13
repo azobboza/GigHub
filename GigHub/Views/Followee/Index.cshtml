@@ -1,0 +1,14 @@
+﻿@model IEnumerable<GigHub.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Who I'm following</h2>
+<ul>
+    @foreach (var a in Model)
+    {
+        <li>@a.Name</li>
+    }
+</ul>
+

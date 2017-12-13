@@ -23,5 +23,20 @@ namespace GigHub.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<ApplicationUser>()
+            //    .HasMany(u => u.Followers)
+            //    .WithRequired(f => f.Artist)
+            //    .WillCascadeOnDelete(false);
+
+            //modelBuilder.Entity<ApplicationUser>()
+            //    .HasMany(u => u.Followees)
+            //    .WithRequired(f => f.User)
+            //    .WillCascadeOnDelete(false);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

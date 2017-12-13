@@ -18,7 +18,7 @@ namespace GigHub.Models
 
         [Key]
         [Column(Order = 2)]
-        public int ArtistId { get; set; }
+        public string ArtistId { get; set; }
 
     }
 }

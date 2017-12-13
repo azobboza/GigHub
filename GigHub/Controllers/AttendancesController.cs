@@ -22,8 +22,6 @@ namespace GigHub.Controllers
         public IHttpActionResult Attend(AttendanceDto dto)
         {
             string userId = User.Identity.GetUserId();
-            //string currentUseerId = "ea73b12e-5ed4-4b20-ac63-a817fb5c6777";
-
             if (_context.Attendances.Any(a => a.GigId == dto.GigId && a.AttendeeId == userId))
                 return BadRequest("The attendance already exists!");
 
@@ -36,7 +34,7 @@ namespace GigHub.Controllers
             _context.Attendances.Add(attendances);
             _context.SaveChanges();
 
-            return Ok("ovo je okej");
+            return Ok();
         }
     }
 }

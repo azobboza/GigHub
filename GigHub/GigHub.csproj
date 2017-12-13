@@ -173,6 +173,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FolloweeController.cs" />
     <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -181,53 +182,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711301358517_Initial model.cs" />
-    <Compile Include="Migrations\201711301358517_Initial model.Designer.cs">
-      <DependentUpon>201711301358517_Initial model.cs</DependentUpon>
+    <Compile Include="Migrations\201712131519143_InitalModel.cs" />
+    <Compile Include="Migrations\201712131519143_InitalModel.Designer.cs">
+      <DependentUpon>201712131519143_InitalModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711301439024_CreateGigTable.cs" />
-    <Compile Include="Migrations\201711301439024_CreateGigTable.Designer.cs">
-      <DependentUpon>201711301439024_CreateGigTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711301510578_OverrideConventionsForGigsAndGenres.cs" />
-    <Compile Include="Migrations\201711301510578_OverrideConventionsForGigsAndGenres.Designer.cs">
-      <DependentUpon>201711301510578_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711301522406_PopulateGenresTable.cs" />
-    <Compile Include="Migrations\201711301522406_PopulateGenresTable.Designer.cs">
-      <DependentUpon>201711301522406_PopulateGenresTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.cs" />
-    <Compile Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.Designer.cs">
-      <DependentUpon>201712010949032_AddForeignKeyPropertiesToGig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.cs" />
-    <Compile Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.Designer.cs">
-      <DependentUpon>201712010951035_ChangeVemueToVenueIntoGig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.cs" />
-    <Compile Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.Designer.cs">
-      <DependentUpon>201712010958584_ChangeTypeOfArtistIdToString.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712051922527_AddNameToApplicationUser.cs" />
-    <Compile Include="Migrations\201712051922527_AddNameToApplicationUser.Designer.cs">
-      <DependentUpon>201712051922527_AddNameToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712061300081_RemoveRequiredForGenres.cs" />
-    <Compile Include="Migrations\201712061300081_RemoveRequiredForGenres.Designer.cs">
-      <DependentUpon>201712061300081_RemoveRequiredForGenres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712061744130_addAttendance.cs" />
-    <Compile Include="Migrations\201712061744130_addAttendance.Designer.cs">
-      <DependentUpon>201712061744130_addAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712121005453_AddFollowingClass.cs" />
-    <Compile Include="Migrations\201712121005453_AddFollowingClass.Designer.cs">
-      <DependentUpon>201712121005453_AddFollowingClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712121112412_changeToApplicationuserClass.cs" />
-    <Compile Include="Migrations\201712121112412_changeToApplicationuserClass.Designer.cs">
-      <DependentUpon>201712121112412_changeToApplicationuserClass.cs</DependentUpon>
+    <Compile Include="Migrations\201712131520431_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\201712131520431_PopulateGenresTable.Designer.cs">
+      <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -291,6 +252,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
+    <Content Include="Views\Followee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,41 +265,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711301358517_Initial model.resx">
-      <DependentUpon>201711301358517_Initial model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712131519143_InitalModel.resx">
+      <DependentUpon>201712131519143_InitalModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711301439024_CreateGigTable.resx">
-      <DependentUpon>201711301439024_CreateGigTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711301510578_OverrideConventionsForGigsAndGenres.resx">
-      <DependentUpon>201711301510578_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711301522406_PopulateGenresTable.resx">
-      <DependentUpon>201711301522406_PopulateGenresTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712010949032_AddForeignKeyPropertiesToGig.resx">
-      <DependentUpon>201712010949032_AddForeignKeyPropertiesToGig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712010951035_ChangeVemueToVenueIntoGig.resx">
-      <DependentUpon>201712010951035_ChangeVemueToVenueIntoGig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712010958584_ChangeTypeOfArtistIdToString.resx">
-      <DependentUpon>201712010958584_ChangeTypeOfArtistIdToString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712051922527_AddNameToApplicationUser.resx">
-      <DependentUpon>201712051922527_AddNameToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712061300081_RemoveRequiredForGenres.resx">
-      <DependentUpon>201712061300081_RemoveRequiredForGenres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712061744130_addAttendance.resx">
-      <DependentUpon>201712061744130_addAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712121005453_AddFollowingClass.resx">
-      <DependentUpon>201712121005453_AddFollowingClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712121112412_changeToApplicationuserClass.resx">
-      <DependentUpon>201712121112412_changeToApplicationuserClass.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712131520431_PopulateGenresTable.resx">
+      <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
