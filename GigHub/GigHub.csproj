@@ -172,6 +172,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GigsController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\FolloweeController.cs" />
     <Compile Include="Controllers\FollowingController.cs" />
@@ -189,6 +190,10 @@
     <Compile Include="Migrations\201712131520431_PopulateGenresTable.cs" />
     <Compile Include="Migrations\201712131520431_PopulateGenresTable.Designer.cs">
       <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151410079_AddIsCanceledToGig.cs" />
+    <Compile Include="Migrations\201712151410079_AddIsCanceledToGig.Designer.cs">
+      <DependentUpon>201712151410079_AddIsCanceledToGig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -271,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712131520431_PopulateGenresTable.resx">
       <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151410079_AddIsCanceledToGig.resx">
+      <DependentUpon>201712151410079_AddIsCanceledToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
