@@ -13,16 +13,12 @@ namespace GigHub.Migrations
                     {
                         GigId = c.Int(nullable: false),
                         AttendeeId = c.String(nullable: false, maxLength: 128),
-                        Attende_Id = c.String(maxLength: 128),
-                        User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => new { t.GigId, t.AttendeeId })
-                .ForeignKey("dbo.AspNetUsers", t => t.Attende_Id)
-                .ForeignKey("dbo.Gigs", t => t.GigId, cascadeDelete: true)
-                .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
-                .Index(t => t.Attende_Id)
-                .Index(t => t.GigId)
-                .Index(t => t.User_Id);
+                .ForeignKey("dbo.AspNetUsers", t => t.AttendeeId, cascadeDelete: true)
+                .ForeignKey("dbo.Gigs", t => t.GigId)
+                .Index(t => t.AttendeeId)
+                .Index(t => t.GigId);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -88,26 +84,50 @@ namespace GigHub.Migrations
                 "dbo.Followings",
                 c => new
                     {
-                        UserId = c.String(nullable: false, maxLength: 128),
-                        ArtistId = c.String(nullable: false, maxLength: 128),
-                        ApplicationUser_Id = c.String(maxLength: 128),
-                        ApplicationUser_Id1 = c.String(maxLength: 128),
+                        FollowerId = c.String(nullable: false, maxLength: 128),
+                        FolloweeId = c.String(nullable: false, maxLength: 128),
                     })
-                .PrimaryKey(t => new { t.UserId, t.ArtistId })
-                .ForeignKey("dbo.AspNetUsers", t => t.ArtistId, cascadeDelete: false)
-                .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: false)
-                .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUser_Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUser_Id1)
-                .Index(t => t.ArtistId)
-                .Index(t => t.UserId)
-                .Index(t => t.ApplicationUser_Id)
-                .Index(t => t.ApplicationUser_Id1);
+                .PrimaryKey(t => new { t.FollowerId, t.FolloweeId })
+                .ForeignKey("dbo.AspNetUsers", t => t.FollowerId)
+                .ForeignKey("dbo.AspNetUsers", t => t.FolloweeId)
+                .Index(t => t.FollowerId)
+                .Index(t => t.FolloweeId);
+            
+            CreateTable(
+                "dbo.UserNotifications",
+                c => new
+                    {
+                        AttendeeId = c.String(nullable: false, maxLength: 128),
+                        NotificationId = c.Int(nullable: false),
+                        IsRead = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.AttendeeId, t.NotificationId })
+                .ForeignKey("dbo.AspNetUsers", t => t.AttendeeId)
+                .ForeignKey("dbo.Notifications", t => t.NotificationId, cascadeDelete: true)
+                .Index(t => t.AttendeeId)
+                .Index(t => t.NotificationId);
+            
+            CreateTable(
+                "dbo.Notifications",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        DateTime = c.DateTime(nullable: false),
+                        Type = c.Int(nullable: false),
+                        OriginalDateTime = c.DateTime(),
+                        OriginalVenue = c.String(),
+                        Gig_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Gigs", t => t.Gig_Id, cascadeDelete: true)
+                .Index(t => t.Gig_Id);
             
             CreateTable(
                 "dbo.Gigs",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        IsCanceled = c.Boolean(nullable: false),
                         ArtistId = c.String(nullable: false, maxLength: 128),
                         DateTime = c.DateTime(nullable: false),
                         Venue = c.String(nullable: false, maxLength: 255),
@@ -132,34 +152,36 @@ namespace GigHub.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Attendances", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Attendances", "GigId", "dbo.Gigs");
+            DropForeignKey("dbo.Attendances", "AttendeeId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.UserNotifications", "NotificationId", "dbo.Notifications");
+            DropForeignKey("dbo.Notifications", "Gig_Id", "dbo.Gigs");
             DropForeignKey("dbo.Gigs", "GenreId", "dbo.Genres");
             DropForeignKey("dbo.Gigs", "ArtistId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Attendances", "Attende_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Followings", "ApplicationUser_Id1", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Followings", "ApplicationUser_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Followings", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Followings", "ArtistId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.UserNotifications", "AttendeeId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Followings", "FolloweeId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Followings", "FollowerId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
-            DropIndex("dbo.Attendances", new[] { "User_Id" });
             DropIndex("dbo.Attendances", new[] { "GigId" });
+            DropIndex("dbo.Attendances", new[] { "AttendeeId" });
+            DropIndex("dbo.UserNotifications", new[] { "NotificationId" });
+            DropIndex("dbo.Notifications", new[] { "Gig_Id" });
             DropIndex("dbo.Gigs", new[] { "GenreId" });
             DropIndex("dbo.Gigs", new[] { "ArtistId" });
-            DropIndex("dbo.Attendances", new[] { "Attende_Id" });
-            DropIndex("dbo.Followings", new[] { "ApplicationUser_Id1" });
-            DropIndex("dbo.Followings", new[] { "ApplicationUser_Id" });
-            DropIndex("dbo.Followings", new[] { "UserId" });
-            DropIndex("dbo.Followings", new[] { "ArtistId" });
+            DropIndex("dbo.UserNotifications", new[] { "AttendeeId" });
+            DropIndex("dbo.Followings", new[] { "FolloweeId" });
+            DropIndex("dbo.Followings", new[] { "FollowerId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "User_Id" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropTable("dbo.Genres");
             DropTable("dbo.Gigs");
+            DropTable("dbo.Notifications");
+            DropTable("dbo.UserNotifications");
             DropTable("dbo.Followings");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");

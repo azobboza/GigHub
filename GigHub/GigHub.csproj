@@ -183,17 +183,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712131519143_InitalModel.cs" />
-    <Compile Include="Migrations\201712131519143_InitalModel.Designer.cs">
-      <DependentUpon>201712131519143_InitalModel.cs</DependentUpon>
+    <Compile Include="Migrations\201712220817205_InitalModel.cs" />
+    <Compile Include="Migrations\201712220817205_InitalModel.Designer.cs">
+      <DependentUpon>201712220817205_InitalModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712131520431_PopulateGenresTable.cs" />
-    <Compile Include="Migrations\201712131520431_PopulateGenresTable.Designer.cs">
-      <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712151410079_AddIsCanceledToGig.cs" />
-    <Compile Include="Migrations\201712151410079_AddIsCanceledToGig.Designer.cs">
-      <DependentUpon>201712151410079_AddIsCanceledToGig.cs</DependentUpon>
+    <Compile Include="Migrations\201712220825395_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\201712220825395_PopulateGenreTable.Designer.cs">
+      <DependentUpon>201712220825395_PopulateGenreTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -203,6 +199,9 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\UserNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
@@ -271,14 +270,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712131519143_InitalModel.resx">
-      <DependentUpon>201712131519143_InitalModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712220817205_InitalModel.resx">
+      <DependentUpon>201712220817205_InitalModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712131520431_PopulateGenresTable.resx">
-      <DependentUpon>201712131520431_PopulateGenresTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712151410079_AddIsCanceledToGig.resx">
-      <DependentUpon>201712151410079_AddIsCanceledToGig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712220825395_PopulateGenreTable.resx">
+      <DependentUpon>201712220825395_PopulateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

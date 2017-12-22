@@ -14,7 +14,7 @@ namespace GigHub.Controllers
     public class AttendancesController : ApiController
     {
         private ApplicationDbContext _context;
-        public AttendancesController()
+        public AttendancesController()    
         {
             _context = new ApplicationDbContext();
         }

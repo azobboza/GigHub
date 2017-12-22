@@ -10,8 +10,7 @@ namespace GigHub.Models
     public class Attendance
     {
         public Gig Gigs { get; set; }
-        public ApplicationUser Attende { get; set; }
-        public ApplicationUser User { get; set; }
+        public ApplicationUser Attendee { get; set; }
 
         [Key]
         [Column(Order = 1)]
