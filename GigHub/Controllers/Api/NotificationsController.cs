@@ -21,6 +21,7 @@ namespace GigHub.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
+
         public IEnumerable<NotificationDto> GetNewNotifications() 
         { 
             string userId = User.Identity.GetUserId();
@@ -31,30 +32,31 @@ namespace GigHub.Controllers.Api
                 .ToList();
 
            
-
-            return notifications.Select(Mapper.Map<Notification, NotificationDto>); 
+            //AutoMapper doesn't work
+            //return notifications.Select(Mapper.Map<Notification, NotificationDto>); 
 
             //---------------------------
             //Replace with AutoMapper----
             //---------------------------
-            //return notifications.Select(n => new NotificationDto() { 
-            //    DateTime = n.DateTime,
-            //    Gig = new GigDto 
-            //    {
-            //        Artist = new UserDto 
-            //        { 
-            //            Id = n.Gig.Artist.Id,
-            //            Name = n.Gig.Artist.Name
-            //        },
-            //        DateTime = n.Gig.DateTime,
-            //        Id = n.Gig.Id,
-            //        IsCanceled = n.Gig.IsCanceled,
-            //        Venue = n.Gig.Venue
-            //    },
-            //    OriginalDateTime = n.OriginalDateTime,
-            //    OriginalVenue = n.OriginalVenue,
-            //    Type = n.Type
-            //});
+            return notifications.Select(n => new NotificationDto()
+            {
+                DateTime = n.DateTime,
+                Gig = new GigDto
+                {
+                    Artist = new UserDto
+                    {
+                        Id = n.Gig.Artist.Id,
+                        Name = n.Gig.Artist.Name
+                    },
+                    DateTime = n.Gig.DateTime,
+                    Id = n.Gig.Id,
+                    IsCanceled = n.Gig.IsCanceled,
+                    Venue = n.Gig.Venue
+                },
+                OriginalDateTime = n.OriginalDateTime,
+                OriginalVenue = n.OriginalVenue,
+                Type = n.Type
+            });
         }
     }
 }

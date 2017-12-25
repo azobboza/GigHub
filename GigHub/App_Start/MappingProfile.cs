@@ -16,5 +16,10 @@ namespace GigHub.App_Start
             Mapper.CreateMap<Gig, GigDto>();
             Mapper.CreateMap<Notification, NotificationDto>();
         }
+
+        protected override void Configure()
+        {
+            
+        }
     }
 }
