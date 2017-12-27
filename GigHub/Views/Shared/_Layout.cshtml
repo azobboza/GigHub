@@ -36,15 +36,14 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/lib")
     @RenderSection("scripts", required: false)
-    <script type="text/x-template" id="notifications-templete">
-        <ul>
+    <script type="text/template" id="notifications-templete">
+        <ul class="notifications">
             <%
                 _.each(notifications, function(notification){
                     if(notification.type == 1) { %>
-                        <li><%= notification.gig.artist.name %> has canceled the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
+                        <li><span class="highlight"><%= notification.gig.artist.name %></span> has canceled the gig at <%= notification.gig.venue %> at <%= moment(notification.gig.dateTime).format("D MMM HH:mm") %>.</li>
                     <%}
                     else if(notification.type == 2)
                     {
@@ -62,12 +61,12 @@
                         if(notification.gig.dateTime != notification.originlDateTime)
                         {
                             changes.push('date/time');
-                            originalValues.push(notification.originlDateTime);
-                            newValues.push(notification.gig.dateTime);
+                            originalValues.push(moment(notification.originlDateTime).format("D MMM HH:dd"));
+                            newValues.push(moment(notification.gig.dateTime).format("D MMM HH:dd"));
                         }
                         
                         %>
-                            <li><%= notification.gig.artist.name%> has changed the <%= changes.join(' and ') %> of the gig from <%= originalValues.join('/')%> to <%= newValues.join('/')%></li>
+                            <li><span class="highlight"><%= notification.gig.artist.name%></span> has changed the <%= changes.join(' and ') %> of the gig from <%= originalValues.join('/')%> to <%= newValues.join('/')%></li>
                         <%
                     }
                 });
@@ -79,7 +78,6 @@
         $(document).ready(function () {
 
             $.getJSON("/api/notifications", function (notifications) {
-
                 if (notifications == 0)
                     return;
 
@@ -95,7 +93,16 @@
                         var compiled = _.template($("#notifications-templete").html());
                         return compiled({ notifications: notifications });
                     },
-                    placement: "title"
+                    placement: "bottom",
+                    template: '<div class="popover popover-notifications" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+                })
+                .on("show.bs.popover", function () {
+                    $.post("/api/notifications/MarkAsRead")
+                        .done(function () {
+                            $(".js-notifications-count")
+                            .text("")
+                            .addClass("hide")
+                        })
                 });
             });
 

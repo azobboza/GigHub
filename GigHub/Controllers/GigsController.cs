@@ -20,7 +20,13 @@ namespace GigHub.Controllers
             //2. What about Repository patttern
             _context = new ApplicationDbContext();
         }
-        
+
+        [HttpPost]
+        public ActionResult Search(GigViewModel viewModel)
+        {
+            return RedirectToAction("Index", "Home", new { query = viewModel.SearchTerm });
+        }
+
         [Authorize]
         public ActionResult Create()
         {

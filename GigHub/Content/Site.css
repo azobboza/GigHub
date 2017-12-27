@@ -49,6 +49,12 @@ input[type="checkbox"].input-validation-error {
 .voffset5 { margin-top: 80px;}
 
 /* Bootstrap overrides*/
+
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 .navbar-inverse {
     background-color: #ff4342;
     border-color: #ff4342;
@@ -189,5 +195,54 @@ h6,
     display: block;
 }
 
-.
+/*.popover-notifications{
+    .popover-content {
+        padding: 0;
+    }
+
+    ul.notifications{
+        list-style: none;
+        padding-left: 0;
+
+        > li {
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
+            }
+        }
+        > li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+}*/
+
+.popover-notifications .popover-content {
+    padding: 0;
+}
+
+.popover-notifications ul.notifications{
+    list-style: none;
+    padding-left: 0;
+}
+
+.popover-notifications ul.notifications > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.popover-notifications ul.notifications > li:last-child {
+    border-bottom: none;
+}
+
+.popover-notifications ul.notifications .highlight {
+    font-weight: bold;
+}
+
+#searchGigs {
+    width: 300px;
+    
+}
 
