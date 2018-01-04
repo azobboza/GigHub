@@ -200,4 +200,3 @@ C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migr
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
-C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
