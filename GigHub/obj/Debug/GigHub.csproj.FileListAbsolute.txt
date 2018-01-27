@@ -131,7 +131,6 @@ C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.Twitte
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.csprojResolveAssemblyReference.cache
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.InitalModel.resources
-C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.PopulateGenresTable.resources
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
@@ -200,3 +199,6 @@ C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migr
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.dll
 C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\AutoMapper.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\AutoMapper.xml
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.PopulateGenreTable.resources
