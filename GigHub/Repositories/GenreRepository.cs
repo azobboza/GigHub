@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GigHub.Repositories
 {
-    public class GenreRepository
+    public class GenreRepository : GigHub.Repositories.IGenreRepository
     {
         private readonly ApplicationDbContext _context;
         public GenreRepository(ApplicationDbContext context)

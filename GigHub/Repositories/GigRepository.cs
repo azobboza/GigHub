@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace GigHub.Repositories
 {
-    public class GigRepository
+    public class GigRepository : GigHub.Repositories.IGigRepository
     {
         private readonly ApplicationDbContext _context;
         public GigRepository(ApplicationDbContext context)
