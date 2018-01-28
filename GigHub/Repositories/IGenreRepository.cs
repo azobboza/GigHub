@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace GigHub.Repositories
 {
-    interface IGenreRepository
+    public interface IGenreRepository
     {
         IEnumerable<GigHub.Models.Genre> GetGenres();
     }

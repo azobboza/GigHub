@@ -202,3 +202,12 @@ C:\Users\b.trifunovic\Desktop\MyFiles\GigHub\GigHub\GigHub\obj\Debug\GigHub.pdb
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\AutoMapper.dll
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\AutoMapper.xml
 C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.PopulateGenreTable.resources
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.Common.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\WebActivatorEx.dll
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.xml
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.Common.xml
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.xml
+C:\Users\Radmilo\Desktop\GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.xml

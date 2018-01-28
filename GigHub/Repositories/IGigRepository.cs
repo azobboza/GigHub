@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 namespace GigHub.Repositories
 {
-    interface IGigRepository
+    public interface IGigRepository
     {
         void Add(GigHub.Models.Gig gig);
         Gig GetGig(int id);

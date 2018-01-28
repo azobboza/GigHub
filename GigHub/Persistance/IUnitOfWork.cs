@@ -2,7 +2,7 @@
 using System;
 namespace GigHub.Persistance
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         IAttendanceRepository Attendance { get; }
         IFollowingRepository Following { get; }

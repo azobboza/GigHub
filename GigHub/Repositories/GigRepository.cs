@@ -22,7 +22,6 @@ namespace GigHub.Repositories
                 .Include(g => g.Genre)
                 .SingleOrDefault(g => g.Id == id);
         }
-
         public void Add(Gig gig) 
         {
             _context.Gigs.Add(gig);

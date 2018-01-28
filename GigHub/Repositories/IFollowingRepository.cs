@@ -2,7 +2,7 @@
 using System;
 namespace GigHub.Repositories
 {
-    interface IFollowingRepository
+    public interface IFollowingRepository
     {
         Following GetFollowing(string userId, string followeeId);
     }
