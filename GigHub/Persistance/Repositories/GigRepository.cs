@@ -45,7 +45,7 @@ namespace GigHub.Persistance.Repositories
                 .Include(a => a.Attendances.Select(g => g.Attendee))
                 .Single(g => g.Id == gigId);
         }
-
+        
         public IEnumerable<Gig> GetUpcomingGigsByArtist(string userId) 
         {
             return _context.Gigs
