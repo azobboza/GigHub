@@ -78,6 +78,5 @@ C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\obj\Debug\GigHub.Te
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\obj\Debug\GigHub.Tests.csproj.CopyComplete
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\obj\Debug\GigHub.Tests.dll
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\obj\Debug\GigHub.Tests.pdb
-C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\bin\Debug\Castle.Core.dll
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub.Tests\bin\Debug\Castle.Core.xml

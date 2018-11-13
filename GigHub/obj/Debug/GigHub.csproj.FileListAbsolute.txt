@@ -289,3 +289,4 @@ C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub\obj\Debug\GigHub.dll
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub\obj\Debug\GigHub.pdb
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub\bin\Castle.Core.dll
 C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub\bin\Castle.Core.xml
+C:\Users\bozidar.trifunovic\Desktop\MyFiles\Gig\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
