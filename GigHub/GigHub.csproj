@@ -215,6 +215,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Core\IApplicationDbContext.cs" />
     <Compile Include="Persistance\Migrations\201712220817205_InitalModel.cs" />
     <Compile Include="Persistance\Migrations\201712220817205_InitalModel.Designer.cs">
       <DependentUpon>201712220817205_InitalModel.cs</DependentUpon>

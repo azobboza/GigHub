@@ -64,6 +64,7 @@ namespace GigHub.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+            kernel.Bind<IApplicationDbContext>().To<ApplicationDbContext>();
         }        
     }
 }
