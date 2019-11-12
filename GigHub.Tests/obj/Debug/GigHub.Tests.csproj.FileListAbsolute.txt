@@ -146,7 +146,6 @@ C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\Microsoft.Ow
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\AutoMapper.xml
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\EntityFramework.xml
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\bozid\Desktop\Practising\Gig\GigHub\GigHub.Tests\bin\Debug\Ninject.Web.Common.xml
